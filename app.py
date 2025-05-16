@@ -26,7 +26,7 @@ st.sidebar.info("Use the top tabs to explore different parts of the analysis.")
 @st.cache_data
 
 def load_data():
-    df = pd.read_csv("data\mortgage_dialer_campaign.csv")
+    df = pd.read_csv("mortgage_dialer_campaign.csv")
     df['treatment'] = (df['call_result'] == 'answer').astype(int)
     return df
 
